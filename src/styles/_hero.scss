@@ -1,0 +1,174 @@
+@use 'variaveis';
+
+.hero{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 1024px;
+    width: 100%;
+    height: 50vw;
+    justify-content: space-between;
+
+
+    &__content{
+        max-width: 560px;
+        width: 100%;
+        padding-top: 45px;
+        margin: 30px 0;
+
+        &--img{
+            padding-bottom: 18px;
+            max-width: 180px;
+            width: 100%;
+            
+        }
+
+        &__info{
+            color: variaveis.$corTextoSecundario;
+            margin-bottom: 6px;
+            font-size: 15px;
+
+            &--age{
+                background-color: variaveis.$corDoBotao;
+                color: #fff;
+                font-weight: bold;
+                padding: 0 8px;
+                display: inline-block;
+                border-radius: 2px;
+                border: none;
+            }
+
+            :nth-child(3){
+                border-left: 1px solid variaveis.$corTextoSecundario;
+                padding-left: 10px;
+                
+            }
+
+            :first-child{
+                padding-left: 0;
+                border-right: 1px solid variaveis.$corTextoSecundario;
+                padding-right: 10px;
+            }
+
+            :last-child{
+                border-right: none;
+                border-left: 1px solid variaveis.$corTextoSecundario;
+                padding-left: 10px;
+            }
+        }
+
+        p{
+            font-size: 16px;
+            margin: 0 1px 30px;
+            color: variaveis.$corTextoPrimario;
+            line-height: 130%;
+        }
+
+        &__buttons{
+            max-width: 480px;
+            display: flex;
+            column-gap: 32px;
+            
+            &__button{
+                a{
+                    text-decoration: none;
+                    color: variaveis.$corTextoPrimario;
+                    font-weight: bold;
+                }
+                width: 100%;
+                padding: 10px 0;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                border: none;
+                border-radius: 3px;
+                text-decoration: none;
+                letter-spacing: 1px;
+                background-color: variaveis.$corDoBotao;
+                color: variaveis.$corTextoPrimario;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: lighten(variaveis.$corDoBotao, 15%);
+                }
+
+                &--buy{
+                    width: 100%;
+                    padding: 10px 0;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    background-color: rgba(0,0,0,.2);
+                    border: 1px solid #00c392;
+                    border-radius: 3px;
+                    color: variaveis.$corTextoPrimario;
+                    cursor: pointer;
+                }
+                
+            }
+        }
+    }
+
+    &--image{
+        img{
+            width: 240px;
+            padding-top: 80px;
+        }
+        }
+}
+
+@media (max-width: 768px) {
+    .hero {
+    flex-direction: column;
+    height: auto;
+
+    &__content {
+        text-align: center;
+        display: contents;
+        background-color: transparent;
+
+        &--img {
+        padding-top: 24px;
+        padding-bottom: 12px;
+        max-width: 100px;
+        }
+
+        p {
+        font-size: 14px;
+        }
+
+        &__buttons {
+        flex-direction: column;
+        column-gap: 0;
+
+        &__button {
+            width: 100%;
+            padding: 8px 30px;
+            font-size: 12px;
+
+            &:hover {
+            background-color: lighten(variaveis.$corDoBotao, 10%);
+            }
+
+            &--buy {
+            padding: 8px 0;
+            font-size: 12px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            }
+        }
+        }
+    }
+
+    &--image {
+        img {
+        width: 180px;
+        padding-top: 40px;
+        display: none;
+        }
+    }
+    }
+}
