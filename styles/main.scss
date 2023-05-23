@@ -1,0 +1,16 @@
+@use 'background';
+@use 'header';
+@use 'hero';
+@use 'variaveis';
+@use 'personagens';
+@use 'trailer';
+@use 'footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+    letter-spacing: 0.08em;
+    font-weight: 400;
+}
